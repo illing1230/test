@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "wikipedia": {
+      "command": "node",
+      "args": ["wikipedia-mcp-server.js"],
+      "env": {}
+    }
+  }
+}

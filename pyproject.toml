@@ -1,0 +1,12 @@
+[project]
+name = "repl-nix-workspace"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "langflow>=1.4.2",
+    "mcp>=1.9.1",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+    "wikipedia>=1.4.0",
+]

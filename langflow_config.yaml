@@ -1,0 +1,136 @@
+# Langflow Configuration File
+# This file contains the configuration settings for running Langflow locally
+
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 7860
+  dev_mode: true
+  reload: true
+  workers: 1
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://localhost:7860"
+    - "http://127.0.0.1:3000"
+    - "http://127.0.0.1:7860"
+
+# Database Configuration
+database:
+  # URL will be set from environment variables or default to SQLite
+  # url: "sqlite:///./langflow.db"
+  pool_size: 10
+  max_overflow: 20
+  echo: false
+  
+# Authentication Configuration
+auth:
+  auto_login: false
+  superuser_username: "admin"
+  superuser_password: "admin"
+  secret_key: "langflow-local-development-key"
+  access_token_expire_minutes: 1440  # 24 hours for development
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "langflow.log"
+  
+# Paths Configuration
+paths:
+  config_dir: "."
+  logs_dir: "./logs"
+  temp_dir: "./temp"
+  uploads_dir: "./uploads"
+  flows_dir: "./flows"
+
+# Frontend Configuration
+frontend:
+  auto_login: false
+  flow_logs_path: "./logs/flows"
+  
+# Cache Configuration
+cache:
+  type: "memory"  # Options: memory, redis
+  # redis_url: "redis://localhost:6379"
+  
+# API Configuration
+api:
+  title: "Langflow API"
+  version: "1.0.0"
+  description: "Langflow Local Development Instance"
+  
+# Feature Flags
+features:
+  store_enabled: true
+  playground_enabled: true
+  logs_enabled: true
+  monitoring_enabled: true
+  
+# Security Configuration
+security:
+  cors_enabled: true
+  rate_limiting_enabled: false
+  max_file_size_mb: 100
+  allowed_file_types:
+    - ".json"
+    - ".txt"
+    - ".csv"
+    - ".py"
+    - ".yaml"
+    - ".yml"
+
+# Development Configuration
+development:
+  auto_reload: true
+  debug_mode: true
+  profiling_enabled: false
+  mock_external_apis: false
+  
+# Integrations Configuration
+integrations:
+  # OpenAI
+  openai:
+    api_key_env: "OPENAI_API_KEY"
+    
+  # Anthropic
+  anthropic:
+    api_key_env: "ANTHROPIC_API_KEY"
+    
+  # Google
+  google:
+    api_key_env: "GOOGLE_API_KEY"
+    
+  # Hugging Face
+  huggingface:
+    api_key_env: "HUGGINGFACE_API_KEY"
+    
+# Monitoring Configuration
+monitoring:
+  metrics_enabled: true
+  health_check_enabled: true
+  
+# Storage Configuration
+storage:
+  flows_path: "./flows"
+  components_path: "./components"
+  uploads_path: "./uploads"
+  
+# UI Configuration
+ui:
+  theme: "light"  # Options: light, dark, auto
+  language: "en"  # Default language
+  show_dev_tools: true
+  
+# Performance Configuration
+performance:
+  max_concurrent_flows: 10
+  flow_timeout_seconds: 300
+  component_timeout_seconds: 30
+  
+# Backup Configuration
+backup:
+  enabled: false
+  frequency: "daily"  # Options: hourly, daily, weekly
+  retention_days: 30
+  path: "./backups"
