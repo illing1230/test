@@ -1,0 +1,7 @@
+Switch to JavaScript for improved compatibility and new functionalities
+
+Migrates the Wikipedia MCP server to JavaScript, adds package.json and package-lock.json for dependency management using Node.js.
+
+Replit-Commit-Author: Agent
+Replit-Commit-Session-Id: 90bdab6f-6ce5-444a-a35a-c1ef3edc4f71
+Replit-Commit-Screenshot-Url: https://storage.googleapis.com/screenshot-production-us-central1/331a7e10-f3bf-4f3a-b0c7-4d967151dcdc/c6386e9c-3cc4-4b86-987e-74f0497dcb49.jpg
